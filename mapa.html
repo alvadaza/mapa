@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa</title>
+    <link rel="stylesheet" href="/mapa/mapa.css">
+    <style>
+        /* Estilo para el mapa */
+        .map {
+          height: 400px;
+          width: 100%;
+        }
+      </style>
+</head>
+<body>
+    <h1>Mi sitio web de búsqueda de artículos en el mapa</h1>
+  </header>
+  <nav>
+    <form>
+      <label for="search-input">Busqueda:</label>
+      <input type="text" id="search-input">
+      <button type="submit">Buscar</button>
+    </form>
+  </nav>
+  <!-- Contenedor para el mapa -->
+  <div id="map" class="map"></div>
+  <footer>
+    <p>Alvaro Daza 2022</p>
+  </footer>
+  <!-- Biblioteca de Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEweqVp6v9EbHhRCIGgMWzc84rP433JAw"></script>
+  <script>
+    // Inicializar el mapa y mostrarlo en el contenedor
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 4.60971, lng: -74.08175},
+        zoom: 8
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEweqVp6v9EbHhRCIGgMWzc84rP433JAw&callback=initMap"></script>
+  <script src="/mapa/mapa.js"></script>
+</body>
+</html>
+
+    
